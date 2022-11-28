@@ -1,0 +1,4 @@
+PI = 3.1416
+print(PI)
+GRAVEDAD = 9.8
+print(GRAVEDAD)

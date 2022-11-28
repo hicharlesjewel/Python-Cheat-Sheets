@@ -2,29 +2,6 @@
 
 Hojas de trucos para aprender Python.
 
-## Comentarios
-
-```python
-# Comentarios en linea con usando un "#" hashtag.
-'''Comentarios multilíneas
-con triples "'" comillas simples
-al inicio y final del comentario.'''
-```
-
-## Imprimir
-
-```python
-# Imprimir en la consola
-print("Hola mundo!")
-```
-
-## Salto de línea
-
-```python
-# Salto de línea
-print("Hola \n mundo!")
-```
-
 ## Tipo de datos
 
 ### Números
@@ -57,7 +34,7 @@ print("Hola \n mundo!")
 # Listas
 [1, 2, 3]
 # Listas con diferentes tipos de datos
-[1, "dos", 3.14]
+[1, 3.14, 3 + 4j, "dos", [1, 2, 3], (4, 5, 6), {"diez": 10}, {7, 8, 9}, True, None ]
 ```
 
 ### Tuplas
@@ -66,7 +43,7 @@ print("Hola \n mundo!")
 # Tuplas
 (1, 2, 3)
 # Tuplas con diferentes tipos de datos
-(1, "dos", 3.14)
+(1, 3.14, 3 + 4j, "dos", [1, 2, 3], (4, 5, 6), {"diez": 10}, {7, 8, 9}, True, None )
 ```
 
 ### Diccionarios
@@ -75,7 +52,7 @@ print("Hola \n mundo!")
 # Diccionarios
 {"uno": 1, "dos": 2, "tres": 3}
 # Diccionarios con diferentes tipos de datos
-{"uno": 1, "dos": "dos", "tres": 3.14}
+{"entero": 1, "flotante": 3.14, "complejo": 3 + 4j, "cadena": "cuatro", "lista": [1, 2, 3], "tupla": (4, 5, 6), "diccionario": {"siete": 7}, "conjunto": {7, 8, 9}, "booleano": True, "diez": None }
 ```
 
 ### Conjuntos
@@ -84,7 +61,7 @@ print("Hola \n mundo!")
 # Conjuntos
 {1, 2, 3}
 # Conjuntos con diferentes tipos de datos
-{1, "dos", 3.14}
+{1, 3.14, 3 + 4j, "dos", [1, 2, 3], (4, 5, 6), {"diez": 10}, {7, 8, 9}, True, None }
 ```
 
 ### Booleanos
@@ -100,6 +77,29 @@ False
 ```python
 # Nulos
 None
+```
+
+## Comentarios
+
+```python
+# Comentarios en linea con usando un "#" hashtag.
+'''Comentarios multilíneas
+con triples "'" comillas simples
+al inicio y final del comentario.'''
+```
+
+## Imprimir
+
+```python
+# Imprimir en la consola
+print("Hola mundo!")
+```
+
+## Salto de línea
+
+```python
+# Salto de línea
+print("Hola \n mundo!")
 ```
 
 ## Variables
@@ -140,15 +140,9 @@ GRAVEDAD = 9.8
 
 ## Concatenación
 
-### Números
+### Números enteros
 
 ```python
-# Concatenación de números con el operador "+"
-x = 1
-y = 2
-z = x + y
-print(z) # 3
-
 # Concatenación de números con el operador "%"
 x = 1
 y = 2
@@ -160,6 +154,38 @@ x = 1
 y = 2
 z = "{} + {} = {}".format(x, y, x + y)
 print(z) # 1 + 2 = 3
+```
+
+### Números de punto flotante
+
+```python
+# Concatenación de números con el operador "%"
+x = 1.1
+y = 2.2
+z = "%s + %s = %s" % (x, y, x + y)
+print(z) # 1.1 + 2.2 = 3.3000000000000003
+
+# Concatenación de números con el método "format()"
+x = 1.1
+y = 2.2
+z = "{} + {} = {}".format(x, y, x + y)
+print(z) # 1.1 + 2.2 = 3.3000000000000003
+```
+
+### Números complejos
+
+```python
+# Concatenación de números con el operador "%"
+x = 1 + 2j
+y = 3 + 4j
+z = "%s + %s = %s" % (x, y, x + y)
+print(z) # (1+2j) + (3+4j) = (4+6j)
+
+# Concatenación de números con el método "format()"
+x = 1 + 2j
+y = 3 + 4j
+z = "{} + {} = {}".format(x, y, x + y)
+print(z) # (1+2j) + (3+4j) = (4+6j)
 ```
 
 ### Cadenas
@@ -217,85 +243,6 @@ y = x * 3
 print(y) # (1, 2, 3, 1, 2, 3, 1, 2, 3)
 ```
 
-### Diccionarios
-
-```python
-# Concatenación de diccionarios con el operador "+"
-x = {"uno": 1, "dos": 2, "tres": 3}
-y = {"cuatro": 4, "cinco": 5, "seis": 6}
-z = x + y
-print(z) # TypeError: unsupported operand type(s) for +: 'dict' and 'dict'
-
-# Concatenación de diccionarios con el operador "*"
-x = {"uno": 1, "dos": 2, "tres": 3}
-y = x * 3
-print(y) # TypeError: unsupported operand type(s) for *: 'dict' and 'int'
-```
-
-### Conjuntos
-
-```python
-# Concatenación de conjuntos con el operador "+"
-x = {1, 2, 3}
-y = {4, 5, 6}
-z = x + y
-print(z) # TypeError: unsupported operand type(s) for +: 'set' and 'set'
-
-# Concatenación de conjuntos con el operador "*"
-x = {1, 2, 3}
-y = x * 3
-print(y) # TypeError: unsupported operand type(s) for *: 'set' and 'int'
-```
-
-### Booleanos
-
-```python
-# Concatenación de booleanos con el operador "+"
-x = True
-y = False
-z = x + y
-print(z) # TypeError: unsupported operand type(s) for +: 'bool' and 'bool'
-
-# Concatenación de booleanos con el operador "*"
-x = True
-y = False
-z = x * 3
-print(z) # TypeError: unsupported operand type(s) for *: 'bool' and 'int'
-```
-
-### Nulos
-
-```python
-# Concatenación de nulos con el operador "+"
-x = None
-y = None
-z = x + y
-print(z) # TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
-
-# Concatenación de nulos con el operador "*"
-x = None
-y = None
-z = x * 3
-print(z) # TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
-```
-
-### Diferentes tipos de datos
-
-````python
-# Concatenación de diferentes tipos de datos con el operador "+"
-x = 1
-y = 2.0
-z = "3"
-w = x + y + z
-print(w) # TypeError: unsupported operand type(s) for +: 'float' and 'str'
-
-# Concatenación de diferentes tipos de datos con el operador "%"
-x = 1
-y = 2.0
-z = "3"
-
-
-
 ## Operadores
 
 ### Operadores aritméticos
@@ -315,7 +262,7 @@ z = "3"
 3 % 2
 # Exponente
 3 ** 2
-````
+```
 
 ### Operadores de asignación
 
