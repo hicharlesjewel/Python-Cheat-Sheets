@@ -1,70 +1,152 @@
-# Python-Cheat-Sheets
+# **Python-Cheat-Sheets**
 
 Hojas de trucos para aprender Python.
 
-## Tipo de datos
+---
 
-### Números
+## **Tipo de datos**
+
+---
+
+### **Números**
+
+---
+
+> Los números en Python se pueden representar de varias maneras:
+
+---
+
+- #### **Enteros**
+
+---
+
+> Los números enteros pueden ser representados en base decimal `(10)`, octal `(8)`, hexadecimal `(16)` o binario `(2)`.
 
 ```python
-# Números enteros
-3
-# Números de punto flotante
-3.14
-# Números complejos
-3 + 4j
+# Base decimal
+>>> 1234
+# Base octal
+>>> 0o1234
+# Base hexadecimal
+>>> 0x1234
+# Base binaria
+>>> 0b1010
+# Notación científica
+>>> 1.23e4
+# Notación decimal
+>>> 1.23e-4
 ```
 
-### Cadenas
+---
+
+- #### **Punto flotante**
+
+---
+
+> Los números de punto flotante pueden ser representados en `notación científica` o en `notación decimal`.
 
 ```python
-# Cadenas de caracteres con comillas dobles
-"Esto es una cadena de caracteres."
-# Cadenas de caracteres con comillas simples
-'Esto es una cadena de caracteres.'
-# Cadenas de caracteres con tres comillas dobles
-"""Esto es una cadena de caracteres."""
-# Cadenas de caracteres con tres comillas simples
-'''Esto es una cadena de caracteres.'''
+# Punto decimal
+>>>2.34
+# Notación científica
+>>>2.34e-5
 ```
 
-### Listas
+---
+
+- #### **Complejos**
+
+---
+
+> Los números complejos son números que tienen una parte real y una parte imaginaria se representan con la letra `j` o `J` al final del numero imaginario.
 
 ```python
-# Listas
+>>> 5 + 6j
+>>> 5 + 6J
+```
+
+---
+
+### **Cadenas**
+
+---
+
+> Las cadenas en Python son secuencias de caracteres Unicode (Unicode strings)y pueden ser representadas con comillas simples `'`, comillas dobles `"` o triples `'''`, `"""`.
+
+```python
+"Cadenas de caracteres con comillas dobles."
+'Cadenas de caracteres con comillas simples.'
+"""Cadenas de caracteres con tres comillas dobles."""
+'''Cadenas de caracteres con tres comillas simples.'''
+```
+
+---
+
+### **Listas**
+
+---
+
+> Una lista es una estructura de datos que contiene una colección o secuencia de datos. Los datos o elementos de una lista deben ir separados con una coma `,` y todo el conjunto entre corchetes `[]`. Se dice que una lista es una estructura mutable porque además de permitir el acceso a los elementos, pueden suprimirse o agregarse nuevos. Puede contener elementos de cualquier tipo, incluso otras listas. Se accede a los elementos de una lista mediante su posición, comenzando por el elemento `0` y entre corchetes `[]`.
+
+```python
+# Lista
 [1, 2, 3]
-# Listas con diferentes tipos de datos
-[1, 3.14, 3 + 4j, "dos", [1, 2, 3], (4, 5, 6), {"diez": 10}, {7, 8, 9}, True, None ]
+# Lista con diferentes tipos de datos
+[1, 2.34, 5 + 6j, "siete", [8, 9, 10], (11, 12, 13), {"catorce": 14, "quince": 15}, {16, 17, 18}, True, None]
 ```
 
-### Tuplas
+---
+
+### **Tuplas**
+
+---
+
+> Una tupla permite tener agrupados un conjunto inmutable de elementos, es decir, en una tupla no es posible agregar ni eliminar elementos. Las tuplas se declaran separando los elementos por comas `,` y éstos, opcionalmente, pueden ir entre paréntesis `()`. Se recomienda el uso de paréntesis para evitar ambigüedades. Puede contener elementos de cualquier tipo, incluso otras tuplas. Se accede a los elementos de una tupla mediante su posición, comenzando por el elemento `0` y entre corchetes `[]`.
 
 ```python
-# Tuplas
+# Tupla
 (1, 2, 3)
-# Tuplas con diferentes tipos de datos
-(1, 3.14, 3 + 4j, "dos", [1, 2, 3], (4, 5, 6), {"diez": 10}, {7, 8, 9}, True, None )
+# Tupla con diferentes tipos de datos
+(1, 2.34, 5 + 6j, "siete", [8, 9, 10], (11, 12, 13), {"catorce": 14, "quince": 15}, {16, 17, 18}, True, None)
 ```
 
-### Diccionarios
+---
+
+### **Diccionarios**
+
+---
+
+> Los diccionarios son objetos que contienen una lista de parejas de elementos. De cada pareja un elemento es la clave, que no puede repetirse, y, el otro, un valor asociado. La clave que se utiliza para acceder al valor tiene que ser un dato inmutable como una cadena, mientras que el valor puede contener elementos de cualquier tipo, incluso otro diccionario. Los diccionarios se declaran con llaves `{"clave": valor}`y cada pareja de elementos se separa con una coma `,`. Se accede a los elementos de un diccionario mediante su clave y entre corchetes `[clave]`.
 
 ```python
-# Diccionarios
+# Diccionario
 {"uno": 1, "dos": 2, "tres": 3}
-# Diccionarios con diferentes tipos de datos
-{"entero": 1, "flotante": 3.14, "complejo": 3 + 4j, "cadena": "cuatro", "lista": [1, 2, 3], "tupla": (4, 5, 6), "diccionario": {"siete": 7}, "conjunto": {7, 8, 9}, "booleano": True, "diez": None }
+# Diccionario con diferentes tipos de datos
+{"entero": 1, "flotante": 2.34, "complejo": 5 + 6j, "cadena": "siete", "lista": [8, 9, 10], "tupla": (11, 12, 13), "diccionario": {"catorce": 14, "quince": 15}, "conjunto": {16, 17, 18}, "booleano": True, "nulo": None}
 ```
 
-### Conjuntos
+---
+
+### **Conjuntos**
+
+---
+
+> Un conjunto es una lista de elementos donde ninguno de ellos está repetido. Los conjuntos se declaran con llaves `{}` y cada elemento se separa con una coma `,`. Puede contener elementos de cualquier tipo, incluso otros conjuntos. No se puede acceder a ellos por su posición sino por su valor ya que no tienen orden ni índice de posición.
 
 ```python
-# Conjuntos
+# Conjunto
 {1, 2, 3}
-# Conjuntos con diferentes tipos de datos
-{1, 3.14, 3 + 4j, "dos", [1, 2, 3], (4, 5, 6), {"diez": 10}, {7, 8, 9}, True, None }
+# Conjunto con diferentes tipos de datos
+{1, 2.34, 5 + 6j, "siete", [8, 9, 10], (11, 12, 13), {"catorce": 14, "quince": 15}, {16, 17, 18}, True, None}
 ```
 
-### Booleanos
+---
+
+### **Booleanos**
+
+---
+
+> Los valores booleanos en Python son usados para representar valores lógicos y pueden ser `True` o `False`.
 
 ```python
 # Booleanos
@@ -72,348 +154,105 @@ True
 False
 ```
 
-### Nulos
+---
+
+### **Nulos**
+
+---
+
+> Los valores nulos en Python son usados para representar valores nulos osea que no tienen valor y pueden ser `None`.
 
 ```python
 # Nulos
 None
 ```
 
-## Comentarios
+---
+
+## **Comentarios**
+
+---
+
+> Los comentarios en Python son líneas de texto que son ignoradas por el intérprete de Python y que se utilizan para documentar o agregar notas al código. Pueden ser representados usando el símbolo `#` para comentarios de una sola línea o usando tres comillas simples `'''` o dobles `"""`para comentarios de varias líneas.
 
 ```python
 # Comentarios en linea con usando un "#" hashtag.
 '''Comentarios multilíneas
-con triples "'" comillas simples
-al inicio y final del comentario.'''
+con tres comillas simples.'''
+"""Comentarios multilíneas
+con tres comillas dobles."""
 ```
 
-## Imprimir
+---
+
+## **Imprimir**
+
+---
+
+> La función `print()` es usada para imprimir en pantalla el valor de una expresión o una cadena de caracteres.
 
 ```python
 # Imprimir en la consola
 print("Hola mundo!")
 ```
 
-## Salto de línea
+---
+
+## **Salto de línea**
+
+---
+
+> El salto de línea en Python se representa con el carácter `\n`.
 
 ```python
 # Salto de línea
-print("Hola \n mundo!")
+print("Hola \nmundo!")
 ```
 
-## Variables
+---
+
+## **Variables**
+
+---
+
+> Variables en Python son contenedores que almacenan valores de cualquier tipo. Se declaran con un nombre y se les asigna un valor usando el operador de asignación `=`. El nombre de una variable puede ser cualquier combinación de letras, números y guiones bajos `_`, pero no puede comenzar con un número. No se pueden usar palabras reservadas como nombres de variables. Las variables son sensibles a mayúsculas y minúsculas, es decir, `nombre` y `Nombre` son dos variables diferentes. Por convención, los nombres de variables se escriben en minúsculas y si son compuestos, se separan con guiones bajos `_`.
 
 ```python
-# Variables en Python son dinámicas, no se necesita declarar el tipo de variable.
-
 # Asignación de variables
-x = 1
-y = 2
-z = 3
+edad_juan = 27
+edad_pedro = 30
+edad_carlos = 28
 
 # Asignación múltiple
-x, y, z = 1, 2, 3
+edad_juan, edad_pedro, edad_carlos = 27, 30, 28
 
 # Asignación múltiple con el mismo valor
-x = y = z = 1
+edad_juan = edad_pedro = edad_carlos = 29
 
 # Asignación de variables con valores de diferentes tipos
-x, y, z = 1, 2.0, "3"
+nombre, edad, estatura = "Carlos", 28, 1.75
 
 # Asignación de variables con valores de diferentes tipos
-x = 1
-y = 2.0
-z = "3"
+nombre = "Carlos"
+edad = 28
+estatura = 1.75
 ```
 
-## Constantes
+---
+
+## **Constantes**
+
+---
+
+> Las constantes en Python son variables que no pueden ser modificadas una vez que se les ha asignado un valor. Se declaran con un nombre y se les asigna un valor usando el operador de asignación `=`. El nombre de una constante puede ser cualquier combinación de letras, números y guiones bajos `_`, pero no puede comenzar con un número. No se pueden usar palabras reservadas como nombres de constantes. Las constantes son sensibles a mayúsculas y minúsculas, es decir, `NOMBRE` y `Nombre` son dos constantes diferentes. Por convención, los nombres de constantes se escriben en mayúsculas y si son compuestos, se separan con guiones bajos `_`.
 
 ```python
-# Constantes en Python son variables que no cambian su valor.
-
-# Por convención, se escriben en mayúsculas.
-
 PI = 3.14159
 GRAVEDAD = 9.8
 ```
 
-## Concatenación
+---
 
-### Números enteros
+## **Concatenación**
 
-```python
-# Concatenación de números con el operador "%"
-x = 1
-y = 2
-z = "%s + %s = %s" % (x, y, x + y)
-print(z) # 1 + 2 = 3
-
-# Concatenación de números con el método "format()"
-x = 1
-y = 2
-z = "{} + {} = {}".format(x, y, x + y)
-print(z) # 1 + 2 = 3
-```
-
-### Números de punto flotante
-
-```python
-# Concatenación de números con el operador "%"
-x = 1.1
-y = 2.2
-z = "%s + %s = %s" % (x, y, x + y)
-print(z) # 1.1 + 2.2 = 3.3000000000000003
-
-# Concatenación de números con el método "format()"
-x = 1.1
-y = 2.2
-z = "{} + {} = {}".format(x, y, x + y)
-print(z) # 1.1 + 2.2 = 3.3000000000000003
-```
-
-### Números complejos
-
-```python
-# Concatenación de números con el operador "%"
-x = 1 + 2j
-y = 3 + 4j
-z = "%s + %s = %s" % (x, y, x + y)
-print(z) # (1+2j) + (3+4j) = (4+6j)
-
-# Concatenación de números con el método "format()"
-x = 1 + 2j
-y = 3 + 4j
-z = "{} + {} = {}".format(x, y, x + y)
-print(z) # (1+2j) + (3+4j) = (4+6j)
-```
-
-### Cadenas
-
-```python
-# Concatenación de cadenas con el operador "+"
-NOMBRE = "Juan"
-APELLIDO = "Perez"
-edad = "30"
-datosPersonales = "Mi nombre es: " + NOMBRE + " Mi apellido es: " + APELLIDO + " Mi edad es: " + edad
-print(datosPersonales) # Mi nombre es: Juan Mi apellido es: Perez Mi edad es: 30
-
-# Concatenación de cadenas con el operador "%"
-NOMBRE = "Juan"
-APELLIDO = "Perez"
-edad = 30
-datosPersonales = "Mi nombre es: %s Mi apellido es: %s Mi edad es: %s" % (NOMBRE, APELLIDO, edad)
-print(datosPersonales) # Mi nombre es: Juan Mi apellido es: Perez Mi edad es: 30
-
-# Concatenación de cadenas con el método "format()"
-NOMBRE = "Juan"
-APELLIDO = "Perez"
-edad = 30
-datosPersonales = "Mi nombre es: {} Mi apellido es: {} Mi edad es: {}".format(NOMBRE, APELLIDO, edad)
-print(datosPersonales) # Mi nombre es: Juan Mi apellido es: Perez Mi edad es: 30
-```
-
-### Listas
-
-```python
-# Concatenación de listas con el operador "+"
-x = [1, 2, 3]
-y = [4, 5, 6]
-z = x + y
-print(z) # [1, 2, 3, 4, 5, 6]
-
-# Concatenación de listas con el operador "*"
-x = [1, 2, 3]
-y = x * 3
-print(y) # [1, 2, 3, 1, 2, 3, 1, 2, 3]
-```
-
-### Tuplas
-
-```python
-# Concatenación de tuplas con el operador "+"
-x = (1, 2, 3)
-y = (4, 5, 6)
-z = x + y
-print(z) # (1, 2, 3, 4, 5, 6)
-
-# Concatenación de tuplas con el operador "*"
-x = (1, 2, 3)
-y = x * 3
-print(y) # (1, 2, 3, 1, 2, 3, 1, 2, 3)
-```
-
-## Operadores
-
-### Operadores aritméticos
-
-```python
-# Suma
-3 + 2
-# Resta
-3 - 2
-# Multiplicación
-3 * 2
-# División
-3 / 2
-# División entera
-3 // 2
-# Módulo
-3 % 2
-# Exponente
-3 ** 2
-```
-
-### Operadores de asignación
-
-```python
-# Asignación
-x = 3
-# Asignación de suma
-x += 3
-# Asignación de resta
-x -= 3
-# Asignación de multiplicación
-x *= 3
-# Asignación de división
-x /= 3
-# Asignación de división entera
-x //= 3
-# Asignación de módulo
-x %= 3
-# Asignación de exponente
-x **= 3
-```
-
-### Operadores de comparación
-
-```python
-# Igual
-3 == 2
-# No igual
-3 != 2
-# Mayor que
-3 > 2
-# Menor que
-3 < 2
-# Mayor o igual que
-3 <= 2
-# Menor o igual que
-3 >= 2
-```
-
-### Operadores lógicos
-
-```python
-# AND
-True and False
-# OR
-True or False
-# NOT
-not True
-```
-
-### Operadores de identidad
-
-```python
-# IS
-3 is 2
-# IS NOT
-3 is not 2
-```
-
-### Operadores de membresía
-
-```python
-# IN
-3 in [1, 2, 3]
-# NOT IN
-3 not in [1, 2, 3]
-```
-
-## Funciones
-
-### Funciones integradas
-
-```python
-# Imprimir
-print("Hola mundo")
-# Longitud
-len("Hola mundo")
-# Tipo de dato
-type("Hola mundo")
-# Conversión a entero
-int("3")
-# Conversión a flotante
-float("3.14")
-# Conversión a cadena
-str(3)
-# Conversión a lista
-list((1, 2, 3))
-# Conversión a tupla
-tuple([1, 2, 3])
-# Conversión a diccionario
-dict([("uno", 1), ("dos", 2), ("tres", 3)])
-# Conversión a conjunto
-set([1, 2, 3])
-```
-
-### Funciones definidas por el usuario
-
-```python
-# Definición de función
-def funcion():
-    print("Hola mundo")
-# Llamada a función
-funcion()
-```
-
-## Estructuras de control
-
-### Condicional if
-
-```python
-# Condicional if
-if 3 > 2:
-    print("3 es mayor que 2")
-```
-
-### Condicional if-else
-
-```python
-# Condicional if-else
-if 3 > 2:
-    print("3 es mayor que 2")
-else:
-    print("3 no es mayor que 2")
-```
-
-### Condicional if-elif-else
-
-```python
-# Condicional if-elif-else
-if 3 > 2:
-    print("3 es mayor que 2")
-elif 3 < 2:
-    print("3 es menor que 2")
-else:
-    print("3 es igual a 2")
-```
-
-### Bucle for
-
-```python
-# Bucle for
-for i in [1, 2, 3]:
-    print(i)
-```
-
-### Bucle while
-
-```python
-# Bucle while
-i = 1
-while i <= 3:
-    print(i)
-    i += 1
-```
+---
