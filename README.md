@@ -6,8 +6,6 @@ Hojas de trucos para aprender Python.
 
 ## **Tipo de datos**
 
----
-
 ### **Números**
 
 ---
@@ -171,8 +169,6 @@ None
 
 ## **Comentarios**
 
----
-
 > Los comentarios en Python son líneas de texto que son ignoradas por el intérprete de Python y que se utilizan para documentar o agregar notas al código. Pueden ser representados usando el símbolo `#` para comentarios de una sola línea o usando tres comillas simples `'''` o dobles `"""`para comentarios de varias líneas.
 
 ```python
@@ -187,8 +183,6 @@ con tres comillas dobles."""
 
 ## **Imprimir**
 
----
-
 > La función `print()` es usada para imprimir en pantalla el valor de una expresión o una cadena de caracteres.
 
 ```python
@@ -200,8 +194,6 @@ print("Hola mundo!")
 
 ## **Salto de línea**
 
----
-
 > El salto de línea en Python se representa con el carácter `\n`.
 
 ```python
@@ -212,8 +204,6 @@ print("Hola \nmundo!")
 ---
 
 ## **Variables**
-
----
 
 > Variables en Python son contenedores que almacenan valores de cualquier tipo. Se declaran con un nombre y se les asigna un valor usando el operador de asignación `=`. El nombre de una variable puede ser cualquier combinación de letras, números y guiones bajos `_`, pero no puede comenzar con un número. No se pueden usar palabras reservadas como nombres de variables. Las variables son sensibles a mayúsculas y minúsculas, es decir, `nombre` y `Nombre` son dos variables diferentes. Por convención, los nombres de variables se escriben en minúsculas y si son compuestos, se separan con guiones bajos `_`.
 
@@ -242,8 +232,6 @@ estatura = 1.75
 
 ## **Constantes**
 
----
-
 > Las constantes en Python son variables que no pueden ser modificadas una vez que se les ha asignado un valor. Se declaran con un nombre y se les asigna un valor usando el operador de asignación `=`. El nombre de una constante puede ser cualquier combinación de letras, números y guiones bajos `_`, pero no puede comenzar con un número. No se pueden usar palabras reservadas como nombres de constantes. Las constantes son sensibles a mayúsculas y minúsculas, es decir, `NOMBRE` y `Nombre` son dos constantes diferentes. Por convención, los nombres de constantes se escriben en mayúsculas y si son compuestos, se separan con guiones bajos `_`.
 
 ```python
@@ -254,5 +242,3 @@ GRAVEDAD = 9.8
 ---
 
 ## **Concatenación**
-
----
